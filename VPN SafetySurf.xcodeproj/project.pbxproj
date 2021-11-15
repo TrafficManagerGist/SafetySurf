@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E0F7FEB273010F800D1951C /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FEA273010F800D1951C /* LoadingViewModel.swift */; };
+		6E0F7FEF2730116300D1951C /* UsageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FEE2730116300D1951C /* UsageManager.swift */; };
+		6E0F7FF12730118300D1951C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FF02730118300D1951C /* MainView.swift */; };
+		6E0F7FF3273012F300D1951C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FF2273012F300D1951C /* MainViewModel.swift */; };
+		6E0F7FF72730136400D1951C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FF62730136400D1951C /* Presenter.swift */; };
+		6E0F7FF9273013A900D1951C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FF8273013A900D1951C /* AppDelegate.swift */; };
+		6E0F7FFB273013B400D1951C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FFA273013B400D1951C /* SceneDelegate.swift */; };
+		6E0F80072730811F00D1951C /* Antonio-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F80042730811E00D1951C /* Antonio-Regular.ttf */; };
+		6E0F80082730811F00D1951C /* Antonio-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F80052730811E00D1951C /* Antonio-Bold.ttf */; };
+		6E0F80092730811F00D1951C /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F80062730811F00D1951C /* Antonio-Light.ttf */; };
+		6E0F800B2730816900D1951C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F800A2730816900D1951C /* Launch Screen.storyboard */; };
+		6E103B29273EA363001EA802 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E103B28273EA363001EA802 /* URLImage */; };
+		6E5A698227295E3400EC060B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A698127295E3400EC060B /* LoadingView.swift */; };
+		6E5A698427295E3700EC060B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A698327295E3700EC060B /* Assets.xcassets */; };
+		6E5A698727295E3700EC060B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A698627295E3700EC060B /* Preview Assets.xcassets */; };
+		6E75BF63273C283B00E101FB /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E75BF62273C283B00E101FB /* PrivacyView.swift */; };
+		6EFA4F4A273DD3D400EFD41F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA4F49273DD3D400EFD41F /* GoogleService-Info.plist */; };
+		6EFA4F52273DD48300EFD41F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F51273DD48300EFD41F /* NotificationService.swift */; };
+		6EFA4F56273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6EFA4F5C273DD7ED00EFD41F /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F5B273DD7ED00EFD41F /* ConfigModel.swift */; };
+		6EFA4F5F273DDCA500EFD41F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F5E273DDCA400EFD41F /* LoginView.swift */; };
+		6EFA4F61273DDCEA00EFD41F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F60273DDCEA00EFD41F /* LoginViewModel.swift */; };
+		AE8D70FBB50C4A959576432C /* Pods_VPN_SafetySurf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC593B643C846FE8BC59039 /* Pods_VPN_SafetySurf.framework */; };
+		EDFC17DEA0FBF73CF7197B45 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82BA269FA989991FEF64B5A /* Pods_OneSignalNotificationServiceExtension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EFA4F54273DD48300EFD41F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E5A697427295E3400EC060B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EFA4F4E273DD48300EFD41F;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6EFA4F5A273DD48300EFD41F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6EFA4F56273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0EA7EF2931924F9E180989C8 /* Pods-VPN SafetySurf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN SafetySurf.release.xcconfig"; path = "Target Support Files/Pods-VPN SafetySurf/Pods-VPN SafetySurf.release.xcconfig"; sourceTree = "<group>"; };
+		2FB4B01037EFC333F4E0E44C /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		6E0F7FEA273010F800D1951C /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		6E0F7FEE2730116300D1951C /* UsageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageManager.swift; sourceTree = "<group>"; };
+		6E0F7FF02730118300D1951C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6E0F7FF2273012F300D1951C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6E0F7FF62730136400D1951C /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		6E0F7FF8273013A900D1951C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E0F7FFA273013B400D1951C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6E0F7FFC273014C200D1951C /* VPN-SafetySurf-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "VPN-SafetySurf-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6E0F80042730811E00D1951C /* Antonio-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Regular.ttf"; sourceTree = "<group>"; };
+		6E0F80052730811E00D1951C /* Antonio-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Bold.ttf"; sourceTree = "<group>"; };
+		6E0F80062730811F00D1951C /* Antonio-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Light.ttf"; sourceTree = "<group>"; };
+		6E0F800A2730816900D1951C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6E5A697C27295E3400EC060B /* VPN SafetySurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VPN SafetySurf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5A698127295E3400EC060B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		6E5A698327295E3700EC060B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E5A698627295E3700EC060B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6E75BF62273C283B00E101FB /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		6EFA4F49273DD3D400EFD41F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EFA4F51273DD48300EFD41F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6EFA4F53273DD48300EFD41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EFA4F5B273DD7ED00EFD41F /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
+		6EFA4F5E273DDCA400EFD41F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6EFA4F60273DDCEA00EFD41F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7F39FB685853C42CE5530D11 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		A82BA269FA989991FEF64B5A /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1AB7AAF38C7ECC5C60ABB1 /* Pods-VPN SafetySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN SafetySurf.debug.xcconfig"; path = "Target Support Files/Pods-VPN SafetySurf/Pods-VPN SafetySurf.debug.xcconfig"; sourceTree = "<group>"; };
+		FEC593B643C846FE8BC59039 /* Pods_VPN_SafetySurf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPN_SafetySurf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E5A697927295E3400EC060B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E103B29273EA363001EA802 /* URLImage in Frameworks */,
+				AE8D70FBB50C4A959576432C /* Pods_VPN_SafetySurf.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EFA4F4C273DD48300EFD41F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDFC17DEA0FBF73CF7197B45 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22FD63C86C9BA51765C9D86F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEC593B643C846FE8BC59039 /* Pods_VPN_SafetySurf.framework */,
+				A82BA269FA989991FEF64B5A /* Pods_OneSignalNotificationServiceExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E0F7FE1272FDD8B00D1951C /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E0F7FF02730118300D1951C /* MainView.swift */,
+				6E0F7FF2273012F300D1951C /* MainViewModel.swift */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE2272FDD9500D1951C /* Connected Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Connected Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE3272FDDE800D1951C /* Disconnected Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Disconnected Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE4272FDDF500D1951C /* Location Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Location Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE5272FDE7400D1951C /* Settings Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Settings Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE6272FDEAE00D1951C /* Loading Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E5A698127295E3400EC060B /* LoadingView.swift */,
+				6E0F7FEA273010F800D1951C /* LoadingViewModel.swift */,
+				6E0F7FEE2730116300D1951C /* UsageManager.swift */,
+				6EFA4F5B273DD7ED00EFD41F /* ConfigModel.swift */,
+			);
+			path = "Loading Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE7272FDF9100D1951C /* Privacy Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E75BF62273C283B00E101FB /* PrivacyView.swift */,
+			);
+			path = "Privacy Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE82730079E00D1951C /* Browser Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Browser Screen";
+			sourceTree = "<group>";
+		};
+		6E0F7FE92730103100D1951C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6E0F7FF8273013A900D1951C /* AppDelegate.swift */,
+				6E0F7FFA273013B400D1951C /* SceneDelegate.swift */,
+				6E0F800A2730816900D1951C /* Launch Screen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E0F7FF42730132800D1951C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E0F7FF62730136400D1951C /* Presenter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E0F80032730810B00D1951C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6E0F80052730811E00D1951C /* Antonio-Bold.ttf */,
+				6E0F80062730811F00D1951C /* Antonio-Light.ttf */,
+				6E0F80042730811E00D1951C /* Antonio-Regular.ttf */,
+				6E5A698327295E3700EC060B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		6E5A697327295E3400EC060B = {
+			isa = PBXGroup;
+			children = (
+				6E5A697E27295E3400EC060B /* VPN SafetySurf */,
+				6EFA4F50273DD48300EFD41F /* OneSignalNotificationServiceExtension */,
+				6E5A697D27295E3400EC060B /* Products */,
+				C0B73F41FE464D7E033105DD /* Pods */,
+				22FD63C86C9BA51765C9D86F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6E5A697D27295E3400EC060B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E5A697C27295E3400EC060B /* VPN SafetySurf.app */,
+				6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E5A697E27295E3400EC060B /* VPN SafetySurf */ = {
+			isa = PBXGroup;
+			children = (
+				6EFA4F5D273DDC6400EFD41F /* Login Screen */,
+				6EFA4F49273DD3D400EFD41F /* GoogleService-Info.plist */,
+				6E0F80032730810B00D1951C /* Assets */,
+				6E0F7FFC273014C200D1951C /* VPN-SafetySurf-Info.plist */,
+				6E0F7FF42730132800D1951C /* Extensions */,
+				6E0F7FE92730103100D1951C /* App */,
+				6E0F7FE82730079E00D1951C /* Browser Screen */,
+				6E0F7FE7272FDF9100D1951C /* Privacy Screen */,
+				6E0F7FE6272FDEAE00D1951C /* Loading Screen */,
+				6E0F7FE5272FDE7400D1951C /* Settings Screen */,
+				6E0F7FE4272FDDF500D1951C /* Location Screen */,
+				6E0F7FE3272FDDE800D1951C /* Disconnected Screen */,
+				6E0F7FE2272FDD9500D1951C /* Connected Screen */,
+				6E0F7FE1272FDD8B00D1951C /* Main Screen */,
+				6E5A698527295E3700EC060B /* Preview Content */,
+			);
+			path = "VPN SafetySurf";
+			sourceTree = "<group>";
+		};
+		6E5A698527295E3700EC060B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6E5A698627295E3700EC060B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6EFA4F50273DD48300EFD41F /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6EFA4F51273DD48300EFD41F /* NotificationService.swift */,
+				6EFA4F53273DD48300EFD41F /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		6EFA4F5D273DDC6400EFD41F /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6EFA4F5E273DDCA400EFD41F /* LoginView.swift */,
+				6EFA4F60273DDCEA00EFD41F /* LoginViewModel.swift */,
+			);
+			path = "Login Screen";
+			sourceTree = "<group>";
+		};
+		C0B73F41FE464D7E033105DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE1AB7AAF38C7ECC5C60ABB1 /* Pods-VPN SafetySurf.debug.xcconfig */,
+				0EA7EF2931924F9E180989C8 /* Pods-VPN SafetySurf.release.xcconfig */,
+				2FB4B01037EFC333F4E0E44C /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				7F39FB685853C42CE5530D11 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E5A697B27295E3400EC060B /* VPN SafetySurf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E5A698A27295E3700EC060B /* Build configuration list for PBXNativeTarget "VPN SafetySurf" */;
+			buildPhases = (
+				8A4D71AAF64C157E446FA507 /* [CP] Check Pods Manifest.lock */,
+				6E5A697827295E3400EC060B /* Sources */,
+				6E5A697927295E3400EC060B /* Frameworks */,
+				6E5A697A27295E3400EC060B /* Resources */,
+				60ACE3CA4049C3EFCB512FFC /* [CP] Embed Pods Frameworks */,
+				6EFA4F5A273DD48300EFD41F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EFA4F55273DD48300EFD41F /* PBXTargetDependency */,
+			);
+			name = "VPN SafetySurf";
+			packageProductDependencies = (
+				6E103B28273EA363001EA802 /* URLImage */,
+			);
+			productName = "VPN SafetySurf";
+			productReference = 6E5A697C27295E3400EC060B /* VPN SafetySurf.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EFA4F4E273DD48300EFD41F /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EFA4F57273DD48300EFD41F /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				13667094015C1B48B56AB1E4 /* [CP] Check Pods Manifest.lock */,
+				6EFA4F4B273DD48300EFD41F /* Sources */,
+				6EFA4F4C273DD48300EFD41F /* Frameworks */,
+				6EFA4F4D273DD48300EFD41F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E5A697427295E3400EC060B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					6E5A697B27295E3400EC060B = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					6EFA4F4E273DD48300EFD41F = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 6E5A697727295E3400EC060B /* Build configuration list for PBXProject "VPN SafetySurf" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E5A697327295E3400EC060B;
+			packageReferences = (
+				6E103B27273EA363001EA802 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
+			productRefGroup = 6E5A697D27295E3400EC060B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E5A697B27295E3400EC060B /* VPN SafetySurf */,
+				6EFA4F4E273DD48300EFD41F /* OneSignalNotificationServiceExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E5A697A27295E3400EC060B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0F800B2730816900D1951C /* Launch Screen.storyboard in Resources */,
+				6E0F80072730811F00D1951C /* Antonio-Regular.ttf in Resources */,
+				6E5A698727295E3700EC060B /* Preview Assets.xcassets in Resources */,
+				6E0F80082730811F00D1951C /* Antonio-Bold.ttf in Resources */,
+				6E5A698427295E3700EC060B /* Assets.xcassets in Resources */,
+				6E0F80092730811F00D1951C /* Antonio-Light.ttf in Resources */,
+				6EFA4F4A273DD3D400EFD41F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EFA4F4D273DD48300EFD41F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13667094015C1B48B56AB1E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60ACE3CA4049C3EFCB512FFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VPN SafetySurf/Pods-VPN SafetySurf-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VPN SafetySurf/Pods-VPN SafetySurf-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VPN SafetySurf/Pods-VPN SafetySurf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A4D71AAF64C157E446FA507 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VPN SafetySurf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E5A697827295E3400EC060B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0F7FF3273012F300D1951C /* MainViewModel.swift in Sources */,
+				6EFA4F5C273DD7ED00EFD41F /* ConfigModel.swift in Sources */,
+				6E0F7FF72730136400D1951C /* Presenter.swift in Sources */,
+				6E0F7FF9273013A900D1951C /* AppDelegate.swift in Sources */,
+				6E0F7FF12730118300D1951C /* MainView.swift in Sources */,
+				6E0F7FFB273013B400D1951C /* SceneDelegate.swift in Sources */,
+				6E5A698227295E3400EC060B /* LoadingView.swift in Sources */,
+				6E0F7FEF2730116300D1951C /* UsageManager.swift in Sources */,
+				6EFA4F61273DDCEA00EFD41F /* LoginViewModel.swift in Sources */,
+				6EFA4F5F273DDCA500EFD41F /* LoginView.swift in Sources */,
+				6E0F7FEB273010F800D1951C /* LoadingViewModel.swift in Sources */,
+				6E75BF63273C283B00E101FB /* PrivacyView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EFA4F4B273DD48300EFD41F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EFA4F52273DD48300EFD41F /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EFA4F55273DD48300EFD41F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EFA4F4E273DD48300EFD41F /* OneSignalNotificationServiceExtension */;
+			targetProxy = 6EFA4F54273DD48300EFD41F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6E5A698827295E3700EC060B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E5A698927295E3700EC060B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E5A698B27295E3700EC060B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE1AB7AAF38C7ECC5C60ABB1 /* Pods-VPN SafetySurf.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VPN SafetySurf/Preview Content\"";
+				DEVELOPMENT_TEAM = 5DUHPBR64U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VPN-SafetySurf-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E5A698C27295E3700EC060B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA7EF2931924F9E180989C8 /* Pods-VPN SafetySurf.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VPN SafetySurf/Preview Content\"";
+				DEVELOPMENT_TEAM = 5DUHPBR64U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VPN-SafetySurf-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6EFA4F58273DD48300EFD41F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB4B01037EFC333F4E0E44C /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5DUHPBR64U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EFA4F59273DD48300EFD41F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F39FB685853C42CE5530D11 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5DUHPBR64U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E5A697727295E3400EC060B /* Build configuration list for PBXProject "VPN SafetySurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E5A698827295E3700EC060B /* Debug */,
+				6E5A698927295E3700EC060B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E5A698A27295E3700EC060B /* Build configuration list for PBXNativeTarget "VPN SafetySurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E5A698B27295E3700EC060B /* Debug */,
+				6E5A698C27295E3700EC060B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EFA4F57273DD48300EFD41F /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EFA4F58273DD48300EFD41F /* Debug */,
+				6EFA4F59273DD48300EFD41F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E103B27273EA363001EA802 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E103B28273EA363001EA802 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E103B27273EA363001EA802 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6E5A697427295E3400EC060B /* Project object */;
+}
