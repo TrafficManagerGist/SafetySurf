@@ -9,106 +9,106 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject var viewModel: MainViewModel
-    @State var isOpen = false
-    @State private var isSharePresented: Bool = false
+    @State var presentingModal = false
     
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color(hex: "5E5CE6"), Color(hex: "64D2FF")]), startPoint: .topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
-            }.present($viewModel.activatePrivacyScreen, view: PrivacyView(isPrivacyPresented: $viewModel.activatePrivacyScreen))
-            ZStack {
-                VStack {
-                    TopShape().foregroundColor(Color(hex: "F3F5F7")).frame(height: geometry.size.height/2.5).edgesIgnoringSafeArea(.all).padding(.bottom, 0)
-                    Spacer()
-                    BottomShape().foregroundColor(Color(hex: "F3F5F7")).frame(height: geometry.size.height/1.5).edgesIgnoringSafeArea(.all).padding(.bottom, 0)
+        NavigationView {
+            
+            GeometryReader { geometry in
+                ZStack {
+                    LinearGradient(gradient: Gradient(colors: [Color(hex: "5E5CE6"), Color(hex: "64D2FF")]), startPoint: .topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
                 }
-            }
-            ZStack {
-                VStack {
-                    Spacer()
-                    HStack {
+                ZStack {
+                    VStack {
+                        TopShape().foregroundColor(Color(hex: "F3F5F7")).frame(height: geometry.size.height/2.5).edgesIgnoringSafeArea(.all).padding(.bottom, 0)
                         Spacer()
+                        BottomShape().foregroundColor(Color(hex: "F3F5F7")).frame(height: geometry.size.height/1.5).edgesIgnoringSafeArea(.all).padding(.bottom, 0)
+                    }
+                }
+                ZStack {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Image("vpnAppIcon").resizable().frame(width: geometry.size.width/5, height: geometry.size.width/5, alignment: .center)
+                            Spacer()
+                        }.padding(.top, 50)
                         
+                        Spacer()
+                        HStack {
+                            Spacer()
                             Button {
-                                print("Connect")
+                                viewModel.vpnButtonPressed()
                             } label: {
                                 ZStack {
-                                StartShape().frame(width: geometry.size.width/2, height: geometry.size.width/2)    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                                    .frame(width: 99, height: 99)
-                                    .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
-                                Text("START").font(.custom("Antonio Light", size: 30)).tracking(1).multilineTextAlignment(.center).gradientForeground(colors: [Color(hex: "64D2FF"), Color(hex: "5E5CE6")])
-                            }
-                        }
-                        
-                        //Start
-                        
-                        Spacer()
-                    }
-                    Spacer(minLength: geometry.size.height/2.5)
-                    HStack {
-                        VStack {
-                            Text("Last locations").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
-                            
-                            ForEach(0 ..< 100) {
-                                    Text("Row \($0)")
+                                    StartShape().frame(width: geometry.size.width/2, height: geometry.size.width/2)    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                                        .frame(width: 99, height: 99)
+                                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
+                                    Text(viewModel.status).font(.custom("Antonio Light", size: 30)).tracking(1).multilineTextAlignment(.center).gradientForeground(colors: [Color(hex: "64D2FF"), Color(hex: "5E5CE6")])
                                 }
+                            }
+                            
+                            //Start
+                            
+                            Spacer()
                         }
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Image("optimalIcon").resizable().frame(width: 20, height: 30, alignment: .center)
+                                Text("Auto").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center)
+                            }.gradientForeground(colors: [Color(hex: viewModel.gradColorOptimalFirst), Color(hex: viewModel.gradColorOptimalSecond)]).onTapGesture {
+                                viewModel.isOptimal.toggle()
+                            }
+                            Spacer()
+                            VStack {
+                                Text(viewModel.currentLocation ?? "").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
+                                Text(viewModel.currentIP ?? "").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
+                            }
+                            Spacer()
+                            VStack {
+                                HStack {
+                                    Circle().fill().foregroundColor(Color(hex: viewModel.firstStrength())).frame(width: 10, height: 10, alignment: .center)
+                                    Circle().fill().foregroundColor(Color(hex: viewModel.secondStrength())).frame(width: 10, height: 10, alignment: .center)
+                                    Circle().fill().foregroundColor(Color(hex: viewModel.thirdStrength())).frame(width: 10, height: 10, alignment: .center)
+                                }
+                                Text("\(viewModel.currentPing ?? "") ms").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
+                            }
+                            Spacer()
+                        }.padding(20)
+                        HStack {
+                            Spacer()
+                            
+                            NavigationLink(destination: LocationView(viewModel: LocationViewModel())) {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 28)
+                                        .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                                        .frame(width: 98, height: 56).shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
+                                    Image("locationIcon").resizable().frame(width: 30, height: 30, alignment: .center)
+                                }
+                            }
+                            Spacer()
+                            Button {
+                                self.presentingModal = true
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 28)
+                                        .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                                        .frame(width: 98, height: 56).shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
+                                    Image("settingsIcon").resizable().frame(width: 30, height: 30, alignment: .center)
+                                }
+                            }.sheet(isPresented: $presentingModal) { SettingsView(viewModel: SettingsViewModel(presentedAsModal: presentingModal)) }
+                            Spacer()
+                        }.padding(.bottom, 50)
                     }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Image("optimalIcon").resizable().frame(width: 20, height: 30, alignment: .center)
-                            Text("Auto").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
-                        }
-                        Spacer()
-                        VStack {
-                            Text("UNITED STATES").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
-                            Text("5.149.112.247").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
-                        }
-                        Spacer()
-                        VStack {
-                            HStack {
-                                Circle().fill().foregroundColor(Color(hex: "32D74B")).frame(width: 10, height: 10, alignment: .center)
-                                Circle().fill().foregroundColor(Color(hex: "32D74B")).frame(width: 10, height: 10, alignment: .center)
-                                Circle().fill().foregroundColor(Color(hex: "32D74B")).frame(width: 10, height: 10, alignment: .center)
-                            }
-                            Text("26 ms").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
-                        }
-                        Spacer()
-                    }.padding(20)
-                    HStack {
-                        Spacer()
-                        Button {
-                            print("Connect")
-                        } label: {
-                            ZStack {
-                            RoundedRectangle(cornerRadius: 28)
-                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                            .frame(width: 98, height: 56).shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
-                                Image("locationIcon").resizable().frame(width: 30, height: 30, alignment: .center)
-                            }
-                        }
-                        Spacer()
-                        Button {
-                            print("Connect")
-                        } label: {
-                            ZStack {
-                            RoundedRectangle(cornerRadius: 28)
-                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                                .frame(width: 98, height: 56).shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
-                                Image("settingsIcon").resizable().frame(width: 30, height: 30, alignment: .center)
-                            }
-                        }
-                        Spacer()
-                    }.padding(.bottom, 50)
-                }
-            }
-        }.edgesIgnoringSafeArea(.all)
+                }.present($viewModel.activatePrivacyScreen, view: PrivacyView(isPrivacyPresented: $viewModel.activatePrivacyScreen))
+                    .present($viewModel.presentingStatus, view: StatusView(viewModel: StatusViewModel()))
+            }.edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
@@ -222,26 +222,6 @@ struct SettingsShape: Shape {
         path.addCurve(to: CGPoint(x: 0.5*width, y: 0.64063*height), control1: CGPoint(x: 0.35937*width, y: 0.57767*height), control2: CGPoint(x: 0.42233*width, y: 0.64063*height))
         path.closeSubpath()
         return path
-    }
-}
-
-struct ImageView: View {
-    @ObservedObject var imageLoader:ImageLoader
-    @State var image:UIImage = UIImage()
-
-    init(url:String) {
-        imageLoader = ImageLoader(urlString:url)
-    }
-
-    var body: some View {
-        
-            Image(uiImage: image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width:100, height:100)
-                .onReceive(imageLoader.didChange) { data in
-                self.image = UIImage(data: data) ?? UIImage()
-        }
     }
 }
 

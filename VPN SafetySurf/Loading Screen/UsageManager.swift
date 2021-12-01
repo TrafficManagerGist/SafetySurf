@@ -24,17 +24,16 @@ class UsageManager {
         }
 
         let ping = items.removeFirst()
-        if let ip = ping.ip, let id = ping.id {
-            PlainPing.ping(ip, completionBlock: { (timeElapsed:Double?, error:Error?) in
-                if let latency = timeElapsed {
-                    self.delegate.usage[id] = latency
-                }
-                if let error = error {
-                    print("error: \(error.localizedDescription)")
-                }
-                self.pingNext()
-            })
-        }
+        guard let ip = ping.ip, let id = ping.id else { return }
+        PlainPing.ping(ip, completionBlock: { (timeElapsed:Double?, error:Error?) in
+            if let latency = timeElapsed {
+                self.delegate.usage[id] = latency
+            }
+            if let error = error {
+                print("error: \(error.localizedDescription)")
+            }
+            self.pingNext()
+        })
     }
     
 }

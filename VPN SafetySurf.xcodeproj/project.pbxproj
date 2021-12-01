@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E0D04642754CDAE0079E9AD /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D04632754CDAE0079E9AD /* BrowserView.swift */; };
+		6E0D04662754CDC00079E9AD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D04652754CDC00079E9AD /* SettingsView.swift */; };
+		6E0D04692754CE100079E9AD /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D04682754CE100079E9AD /* LocationView.swift */; };
+		6E0D046B2754CE1B0079E9AD /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D046A2754CE1B0079E9AD /* StatusView.swift */; };
+		6E0D047227562B9F0079E9AD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D047127562B9E0079E9AD /* SettingsViewModel.swift */; };
 		6E0F7FEB273010F800D1951C /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FEA273010F800D1951C /* LoadingViewModel.swift */; };
 		6E0F7FEF2730116300D1951C /* UsageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FEE2730116300D1951C /* UsageManager.swift */; };
 		6E0F7FF12730118300D1951C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0F7FF02730118300D1951C /* MainView.swift */; };
@@ -18,30 +23,19 @@
 		6E0F80082730811F00D1951C /* Antonio-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F80052730811E00D1951C /* Antonio-Bold.ttf */; };
 		6E0F80092730811F00D1951C /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F80062730811F00D1951C /* Antonio-Light.ttf */; };
 		6E0F800B2730816900D1951C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0F800A2730816900D1951C /* Launch Screen.storyboard */; };
-		6E103B29273EA363001EA802 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E103B28273EA363001EA802 /* URLImage */; };
+		6E18BB8427565B6F00DCE286 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18BB8327565B6F00DCE286 /* LocationViewModel.swift */; };
+		6E18BB8D27579A5600DCE286 /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = 6E18BB8C27579A5600DCE286 /* SwURL */; };
+		6E18BB912757AEF200DCE286 /* VPNLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18BB902757AEF200DCE286 /* VPNLogic.swift */; };
+		6E18BB932757BB7F00DCE286 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E18BB922757BB7F00DCE286 /* NetworkExtension.framework */; };
+		6E18BB952757C8BA00DCE286 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18BB942757C8BA00DCE286 /* StatusViewModel.swift */; };
 		6E5A698227295E3400EC060B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A698127295E3400EC060B /* LoadingView.swift */; };
 		6E5A698427295E3700EC060B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A698327295E3700EC060B /* Assets.xcassets */; };
 		6E5A698727295E3700EC060B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A698627295E3700EC060B /* Preview Assets.xcassets */; };
 		6E75BF63273C283B00E101FB /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E75BF62273C283B00E101FB /* PrivacyView.swift */; };
 		6EFA4F4A273DD3D400EFD41F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA4F49273DD3D400EFD41F /* GoogleService-Info.plist */; };
-		6EFA4F52273DD48300EFD41F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F51273DD48300EFD41F /* NotificationService.swift */; };
-		6EFA4F56273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6EFA4F5C273DD7ED00EFD41F /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F5B273DD7ED00EFD41F /* ConfigModel.swift */; };
-		6EFA4F5F273DDCA500EFD41F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F5E273DDCA400EFD41F /* LoginView.swift */; };
-		6EFA4F61273DDCEA00EFD41F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA4F60273DDCEA00EFD41F /* LoginViewModel.swift */; };
 		AE8D70FBB50C4A959576432C /* Pods_VPN_SafetySurf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC593B643C846FE8BC59039 /* Pods_VPN_SafetySurf.framework */; };
-		EDFC17DEA0FBF73CF7197B45 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82BA269FA989991FEF64B5A /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6EFA4F54273DD48300EFD41F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E5A697427295E3400EC060B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6EFA4F4E273DD48300EFD41F;
-			remoteInfo = OneSignalNotificationServiceExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6EFA4F5A273DD48300EFD41F /* Embed App Extensions */ = {
@@ -50,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6EFA4F56273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +53,11 @@
 /* Begin PBXFileReference section */
 		0EA7EF2931924F9E180989C8 /* Pods-VPN SafetySurf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN SafetySurf.release.xcconfig"; path = "Target Support Files/Pods-VPN SafetySurf/Pods-VPN SafetySurf.release.xcconfig"; sourceTree = "<group>"; };
 		2FB4B01037EFC333F4E0E44C /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		6E0D04632754CDAE0079E9AD /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
+		6E0D04652754CDC00079E9AD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = "VPN SafetySurf/Browser Screen/SettingsView.swift"; sourceTree = SOURCE_ROOT; };
+		6E0D04682754CE100079E9AD /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationView.swift; path = "VPN SafetySurf/Browser Screen/LocationView.swift"; sourceTree = SOURCE_ROOT; };
+		6E0D046A2754CE1B0079E9AD /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusView.swift; path = "VPN SafetySurf/Browser Screen/StatusView.swift"; sourceTree = SOURCE_ROOT; };
+		6E0D047127562B9E0079E9AD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		6E0F7FEA273010F800D1951C /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		6E0F7FEE2730116300D1951C /* UsageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageManager.swift; sourceTree = "<group>"; };
 		6E0F7FF02730118300D1951C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -72,18 +70,18 @@
 		6E0F80052730811E00D1951C /* Antonio-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Bold.ttf"; sourceTree = "<group>"; };
 		6E0F80062730811F00D1951C /* Antonio-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Light.ttf"; sourceTree = "<group>"; };
 		6E0F800A2730816900D1951C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6E18BB8327565B6F00DCE286 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		6E18BB8527578C7100DCE286 /* VPN SafetySurf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "VPN SafetySurf.entitlements"; sourceTree = "<group>"; };
+		6E18BB902757AEF200DCE286 /* VPNLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNLogic.swift; sourceTree = "<group>"; };
+		6E18BB922757BB7F00DCE286 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		6E18BB942757C8BA00DCE286 /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		6E5A697C27295E3400EC060B /* VPN SafetySurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VPN SafetySurf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5A698127295E3400EC060B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6E5A698327295E3700EC060B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E5A698627295E3700EC060B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E75BF62273C283B00E101FB /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 		6EFA4F49273DD3D400EFD41F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EFA4F51273DD48300EFD41F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		6EFA4F53273DD48300EFD41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EFA4F5B273DD7ED00EFD41F /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
-		6EFA4F5E273DDCA400EFD41F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		6EFA4F60273DDCEA00EFD41F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7F39FB685853C42CE5530D11 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		A82BA269FA989991FEF64B5A /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1AB7AAF38C7ECC5C60ABB1 /* Pods-VPN SafetySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN SafetySurf.debug.xcconfig"; path = "Target Support Files/Pods-VPN SafetySurf/Pods-VPN SafetySurf.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,16 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E103B29273EA363001EA802 /* URLImage in Frameworks */,
+				6E18BB8D27579A5600DCE286 /* SwURL in Frameworks */,
+				6E18BB932757BB7F00DCE286 /* NetworkExtension.framework in Frameworks */,
 				AE8D70FBB50C4A959576432C /* Pods_VPN_SafetySurf.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EFA4F4C273DD48300EFD41F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDFC17DEA0FBF73CF7197B45 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +105,7 @@
 		22FD63C86C9BA51765C9D86F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E18BB922757BB7F00DCE286 /* NetworkExtension.framework */,
 				FEC593B643C846FE8BC59039 /* Pods_VPN_SafetySurf.framework */,
 				A82BA269FA989991FEF64B5A /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
@@ -129,23 +121,20 @@
 			path = "Main Screen";
 			sourceTree = "<group>";
 		};
-		6E0F7FE2272FDD9500D1951C /* Connected Screen */ = {
+		6E0F7FE3272FDDE800D1951C /* Status Screen */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D046A2754CE1B0079E9AD /* StatusView.swift */,
+				6E18BB942757C8BA00DCE286 /* StatusViewModel.swift */,
 			);
-			path = "Connected Screen";
-			sourceTree = "<group>";
-		};
-		6E0F7FE3272FDDE800D1951C /* Disconnected Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Disconnected Screen";
+			path = "Status Screen";
 			sourceTree = "<group>";
 		};
 		6E0F7FE4272FDDF500D1951C /* Location Screen */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D04682754CE100079E9AD /* LocationView.swift */,
+				6E18BB8327565B6F00DCE286 /* LocationViewModel.swift */,
 			);
 			path = "Location Screen";
 			sourceTree = "<group>";
@@ -153,6 +142,8 @@
 		6E0F7FE5272FDE7400D1951C /* Settings Screen */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D04652754CDC00079E9AD /* SettingsView.swift */,
+				6E0D047127562B9E0079E9AD /* SettingsViewModel.swift */,
 			);
 			path = "Settings Screen";
 			sourceTree = "<group>";
@@ -179,6 +170,7 @@
 		6E0F7FE82730079E00D1951C /* Browser Screen */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D04632754CDAE0079E9AD /* BrowserView.swift */,
 			);
 			path = "Browser Screen";
 			sourceTree = "<group>";
@@ -212,11 +204,18 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		6E18BB8E2757AE4F00DCE286 /* VPN Logic */ = {
+			isa = PBXGroup;
+			children = (
+				6E18BB902757AEF200DCE286 /* VPNLogic.swift */,
+			);
+			path = "VPN Logic";
+			sourceTree = "<group>";
+		};
 		6E5A697327295E3400EC060B = {
 			isa = PBXGroup;
 			children = (
 				6E5A697E27295E3400EC060B /* VPN SafetySurf */,
-				6EFA4F50273DD48300EFD41F /* OneSignalNotificationServiceExtension */,
 				6E5A697D27295E3400EC060B /* Products */,
 				C0B73F41FE464D7E033105DD /* Pods */,
 				22FD63C86C9BA51765C9D86F /* Frameworks */,
@@ -227,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				6E5A697C27295E3400EC060B /* VPN SafetySurf.app */,
-				6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,7 +233,8 @@
 		6E5A697E27295E3400EC060B /* VPN SafetySurf */ = {
 			isa = PBXGroup;
 			children = (
-				6EFA4F5D273DDC6400EFD41F /* Login Screen */,
+				6E18BB8E2757AE4F00DCE286 /* VPN Logic */,
+				6E18BB8527578C7100DCE286 /* VPN SafetySurf.entitlements */,
 				6EFA4F49273DD3D400EFD41F /* GoogleService-Info.plist */,
 				6E0F80032730810B00D1951C /* Assets */,
 				6E0F7FFC273014C200D1951C /* VPN-SafetySurf-Info.plist */,
@@ -246,8 +245,7 @@
 				6E0F7FE6272FDEAE00D1951C /* Loading Screen */,
 				6E0F7FE5272FDE7400D1951C /* Settings Screen */,
 				6E0F7FE4272FDDF500D1951C /* Location Screen */,
-				6E0F7FE3272FDDE800D1951C /* Disconnected Screen */,
-				6E0F7FE2272FDD9500D1951C /* Connected Screen */,
+				6E0F7FE3272FDDE800D1951C /* Status Screen */,
 				6E0F7FE1272FDD8B00D1951C /* Main Screen */,
 				6E5A698527295E3700EC060B /* Preview Content */,
 			);
@@ -260,24 +258,6 @@
 				6E5A698627295E3700EC060B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6EFA4F50273DD48300EFD41F /* OneSignalNotificationServiceExtension */ = {
-			isa = PBXGroup;
-			children = (
-				6EFA4F51273DD48300EFD41F /* NotificationService.swift */,
-				6EFA4F53273DD48300EFD41F /* Info.plist */,
-			);
-			path = OneSignalNotificationServiceExtension;
-			sourceTree = "<group>";
-		};
-		6EFA4F5D273DDC6400EFD41F /* Login Screen */ = {
-			isa = PBXGroup;
-			children = (
-				6EFA4F5E273DDCA400EFD41F /* LoginView.swift */,
-				6EFA4F60273DDCEA00EFD41F /* LoginViewModel.swift */,
-			);
-			path = "Login Screen";
 			sourceTree = "<group>";
 		};
 		C0B73F41FE464D7E033105DD /* Pods */ = {
@@ -308,33 +288,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				6EFA4F55273DD48300EFD41F /* PBXTargetDependency */,
 			);
 			name = "VPN SafetySurf";
 			packageProductDependencies = (
-				6E103B28273EA363001EA802 /* URLImage */,
+				6E18BB8C27579A5600DCE286 /* SwURL */,
 			);
 			productName = "VPN SafetySurf";
 			productReference = 6E5A697C27295E3400EC060B /* VPN SafetySurf.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6EFA4F4E273DD48300EFD41F /* OneSignalNotificationServiceExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6EFA4F57273DD48300EFD41F /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
-			buildPhases = (
-				13667094015C1B48B56AB1E4 /* [CP] Check Pods Manifest.lock */,
-				6EFA4F4B273DD48300EFD41F /* Sources */,
-				6EFA4F4C273DD48300EFD41F /* Frameworks */,
-				6EFA4F4D273DD48300EFD41F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OneSignalNotificationServiceExtension;
-			productName = OneSignalNotificationServiceExtension;
-			productReference = 6EFA4F4F273DD48300EFD41F /* OneSignalNotificationServiceExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -349,9 +310,6 @@
 					6E5A697B27295E3400EC060B = {
 						CreatedOnToolsVersion = 13.0;
 					};
-					6EFA4F4E273DD48300EFD41F = {
-						CreatedOnToolsVersion = 13.1;
-					};
 				};
 			};
 			buildConfigurationList = 6E5A697727295E3400EC060B /* Build configuration list for PBXProject "VPN SafetySurf" */;
@@ -364,14 +322,13 @@
 			);
 			mainGroup = 6E5A697327295E3400EC060B;
 			packageReferences = (
-				6E103B27273EA363001EA802 /* XCRemoteSwiftPackageReference "url-image" */,
+				6E18BB8B27579A5600DCE286 /* XCRemoteSwiftPackageReference "SwURL" */,
 			);
 			productRefGroup = 6E5A697D27295E3400EC060B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6E5A697B27295E3400EC060B /* VPN SafetySurf */,
-				6EFA4F4E273DD48300EFD41F /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -391,38 +348,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EFA4F4D273DD48300EFD41F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13667094015C1B48B56AB1E4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		60ACE3CA4049C3EFCB512FFC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,33 +402,23 @@
 				6E0F7FF72730136400D1951C /* Presenter.swift in Sources */,
 				6E0F7FF9273013A900D1951C /* AppDelegate.swift in Sources */,
 				6E0F7FF12730118300D1951C /* MainView.swift in Sources */,
+				6E0D047227562B9F0079E9AD /* SettingsViewModel.swift in Sources */,
 				6E0F7FFB273013B400D1951C /* SceneDelegate.swift in Sources */,
+				6E18BB8427565B6F00DCE286 /* LocationViewModel.swift in Sources */,
+				6E18BB912757AEF200DCE286 /* VPNLogic.swift in Sources */,
 				6E5A698227295E3400EC060B /* LoadingView.swift in Sources */,
+				6E0D04692754CE100079E9AD /* LocationView.swift in Sources */,
+				6E0D04662754CDC00079E9AD /* SettingsView.swift in Sources */,
 				6E0F7FEF2730116300D1951C /* UsageManager.swift in Sources */,
-				6EFA4F61273DDCEA00EFD41F /* LoginViewModel.swift in Sources */,
-				6EFA4F5F273DDCA500EFD41F /* LoginView.swift in Sources */,
+				6E0D046B2754CE1B0079E9AD /* StatusView.swift in Sources */,
+				6E0D04642754CDAE0079E9AD /* BrowserView.swift in Sources */,
 				6E0F7FEB273010F800D1951C /* LoadingViewModel.swift in Sources */,
+				6E18BB952757C8BA00DCE286 /* StatusViewModel.swift in Sources */,
 				6E75BF63273C283B00E101FB /* PrivacyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EFA4F4B273DD48300EFD41F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EFA4F52273DD48300EFD41F /* NotificationService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6EFA4F55273DD48300EFD41F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6EFA4F4E273DD48300EFD41F /* OneSignalNotificationServiceExtension */;
-			targetProxy = 6EFA4F54273DD48300EFD41F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6E5A698827295E3700EC060B /* Debug */ = {
@@ -626,17 +544,21 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "VPN SafetySurf/VPN SafetySurf.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VPN SafetySurf/Preview Content\"";
-				DEVELOPMENT_TEAM = HYHTLU9TLL;
+				DEVELOPMENT_TEAM = 5DUHPBR64U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "VPN-SafetySurf-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safety Surf";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -645,9 +567,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tr.safetysurf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Safety Surf";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -661,17 +583,21 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "VPN SafetySurf/VPN SafetySurf.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VPN SafetySurf/Preview Content\"";
-				DEVELOPMENT_TEAM = HYHTLU9TLL;
+				DEVELOPMENT_TEAM = 5DUHPBR64U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "VPN-SafetySurf-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Safety Surf";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -680,67 +606,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tr.safetysurf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Safety Surf";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		6EFA4F58273DD48300EFD41F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FB4B01037EFC333F4E0E44C /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HYHTLU9TLL;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf.OneSignalNotificationServiceExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SafetySurf Push";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6EFA4F59273DD48300EFD41F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F39FB685853C42CE5530D11 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HYHTLU9TLL;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securecon.safetysurf.OneSignalNotificationServiceExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SafetySurf Push";
-				SKIP_INSTALL = YES;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -768,33 +636,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EFA4F57273DD48300EFD41F /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6EFA4F58273DD48300EFD41F /* Debug */,
-				6EFA4F59273DD48300EFD41F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6E103B27273EA363001EA802 /* XCRemoteSwiftPackageReference "url-image" */ = {
+		6E18BB8B27579A5600DCE286 /* XCRemoteSwiftPackageReference "SwURL" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			repositoryURL = "https://github.com/cmtrounce/SwURL";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				kind = exactVersion;
+				version = 0.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6E103B28273EA363001EA802 /* URLImage */ = {
+		6E18BB8C27579A5600DCE286 /* SwURL */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E103B27273EA363001EA802 /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImage;
+			package = 6E18BB8B27579A5600DCE286 /* XCRemoteSwiftPackageReference "SwURL" */;
+			productName = SwURL;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

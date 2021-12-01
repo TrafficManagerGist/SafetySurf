@@ -9,15 +9,19 @@ import Foundation
 import ApphudSDK
 
 var configModel: Config?
-var products: [ApphudProduct]?
+var identServers = [ServerIdentifiable]()
 
 struct Config: Codable {
     let servers: [Server]?
 }
 
 struct Server: Codable {
-    let id: Int?
-    let location: String?
-    let imageLink: String?
-    let ip, username, pass, psk: String?
+    let id, location, imageLink, ip, username, pass: String?
+}
+
+struct ServerIdentifiable: Identifiable {
+    let id = UUID()
+    let strength: Int
+    let ping: Int
+    let location, imageLink, ip, username, pass, serverID: String
 }

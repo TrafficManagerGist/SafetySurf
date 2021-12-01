@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "URLImage",
-        "repositoryURL": "https://github.com/dmytro-anokhin/url-image",
+        "package": "SwURL",
+        "repositoryURL": "https://github.com/cmtrounce/SwURL",
         "state": {
           "branch": null,
-          "revision": "4042f955f1fdff00ced85545e1eecdbf969b5cd0",
-          "version": "3.1.1"
+          "revision": "ea349b67d8fd663d0e96e3116280ba1615a83d3d",
+          "version": "0.4.0"
         }
       }
     ]

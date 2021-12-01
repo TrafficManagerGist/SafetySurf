@@ -7,29 +7,41 @@
 
 import SwiftUI
 import Combine
-import ApphudSDK
 import Firebase
-import AppsFlyerLib
 
 class LoadingViewModel: ObservableObject {
     var activateMainScreen = false
     @Published var isLoaded = false {
         didSet {
             if isLoaded {
-                self.activateMainScreen.toggle()
+                setIdentifiableServers()
+                self.activateMainScreen = true
             }
         }
     }
     
-    @Published var usage = [Int: Double]()
+    @Published var usage = [String: Double]()
     
     func startLoading() {
         fetchRemoteConfig()
-        Apphud.start(apiKey: "app_uo916tWCkyQM6f7gVGF8qvZEpt5Er9", userID: Apphud.userID(), observerMode: true)
-        Apphud.getPaywalls(callback: { (paywalls, Error) in
-            let paywall = paywalls?.first(where: { $0.identifier == "safetysurfpaywall" })
-            products = paywall?.products
-        })
+    }
+    
+    func setIdentifiableServers() {
+        identServers.removeAll()
+        guard let items = configModel?.servers else { return }
+        for config in items {
+            if let id = config.id, let location = config.location, let imageLink = config.imageLink, let username = config.username, let pass = config.pass, let ip = config.ip
+            {
+                let usage = usage[id]
+                let region = ServerIdentifiable(strength: getUsage(from: usage), ping: Int(usage ?? 999), location: location, imageLink: imageLink, ip: ip, username: username, pass: pass, serverID: id)
+                identServers.append(region)
+            } else {
+                print("NEMAE")
+            }
+            
+        }
+        print("drg: \(items.count)")
+        print("FAFAEGGE: \(identServers.count)")
     }
     
     private func usageReqest() {
@@ -38,6 +50,19 @@ class LoadingViewModel: ObservableObject {
         tracker.pingNext()
     }
     
+    func getUsage(from ping: Double?) -> Int {
+        guard let ping = ping else { return 0 }
+        if ping < 120 {
+            return 3
+        }
+        if ping > 120 && ping < 150{
+            return 2
+        }
+        if ping > 150 && ping < 200 {
+            return 1
+        }
+        return 0
+    }
     
     func fetchRemoteConfig(){
         remoteConfig.fetch(withExpirationDuration: 0) { [unowned self] (status, error) in

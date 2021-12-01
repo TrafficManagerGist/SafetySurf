@@ -20,7 +20,6 @@ struct LoadingView: View {
         ZStack {
             Color(hex: "F3F5F7").edgesIgnoringSafeArea(.all)
             
-            
             GeometryReader { geometry in
                 VStack(alignment: .center) {
                     Spacer()
@@ -37,7 +36,7 @@ struct LoadingView: View {
                     Spacer()
                 }
             }
-        }.present($viewModel.activateMainScreen, view: MainView(viewModel: MainViewModel(usage: viewModel.usage)))
+        }.present($viewModel.activateMainScreen, view: MainView(viewModel: MainViewModel()))
     }
 }
 
