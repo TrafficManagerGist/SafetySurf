@@ -8,10 +8,12 @@
 import SwiftUI
 import Combine
 import NetworkExtension
+import CoreLocation
 
-class MainViewModel: ObservableObject {
+class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     var isFirstEnter = false
+    @Published var isAnimating = false
     @Published var presentingStatus = false
     @Published var activatePrivacyScreen = false
     @Published var status = "START"
@@ -66,13 +68,28 @@ class MainViewModel: ObservableObject {
         }
     }
     
-    init() {
+    private var locationManager = CLLocationManager()
+    
+    override init() {
+        super.init()
         checkFirstEnter()
+        
+        if VPNLogic().vpnManager.connection.status == .connected {
+            presentingStatus = true
+        }
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name.NEVPNStatusDidChange, object: nil, queue: nil, using: { notification in
             let nevpnconn = notification.object as! NEVPNConnection
             let status = nevpnconn.status
             self.checkVPNStatus(status: status)
         })
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+        }
     }
     
     func checkVPNStatus(status:NEVPNStatus) {
@@ -85,21 +102,25 @@ class MainViewModel: ObservableObject {
             print("NEVPNConnection: Disconnected")
             self.status = "START"
             presentingStatus = false
+            self.isAnimating = false
             if isFirstEnter {
                 VPNLogic().connectVPN()
                 isFirstEnter = false
             }
         case NEVPNStatus.connecting:
             print("NEVPNConnection: Connecting")
-            self.status = "CONNECTING"
+            self.status = "STOP"
+            self.isAnimating = true
         case NEVPNStatus.connected:
             print("NEVPNConnection: Connected")
             self.status = "STOP"
             presentingStatus = true
+            self.isAnimating = false
         case NEVPNStatus.reasserting:
             print("NEVPNConnection: Reasserting")
         case NEVPNStatus.disconnecting:
             self.status = "DISCONNECTING"
+            self.isAnimating = true
             print("NEVPNConnection: Disconnecting")
         @unknown default:
             print("NEVPNConnection: Unknown Error")

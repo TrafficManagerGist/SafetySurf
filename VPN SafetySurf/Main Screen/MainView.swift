@@ -40,19 +40,7 @@ struct MainView: View {
                         Spacer()
                         HStack {
                             Spacer()
-                            Button {
-                                viewModel.vpnButtonPressed()
-                            } label: {
-                                ZStack {
-                                    StartShape().frame(width: geometry.size.width/2, height: geometry.size.width/2)    .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                                        .frame(width: 99, height: 99)
-                                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
-                                    Text(viewModel.status).font(.custom("Antonio Light", size: 30)).tracking(1).multilineTextAlignment(.center).gradientForeground(colors: [Color(hex: "64D2FF"), Color(hex: "5E5CE6")])
-                                }
-                            }
-                            
-                            //Start
-                            
+                            PJRPulseButton(color: Color.white, systemImageName: "", buttonWidth: geometry.size.width/2, numberOfOuterCircles: 5, animationDuration: 2, viewModel: viewModel)
                             Spacer()
                         }
                         Spacer()

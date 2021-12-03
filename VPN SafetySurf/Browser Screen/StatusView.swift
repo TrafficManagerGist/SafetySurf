@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Charts
+
 struct StatusView: View {
     @ObservedObject var viewModel: StatusViewModel
+    @State var presentingModal = false
     
     init(viewModel: StatusViewModel) {
         self.viewModel = viewModel
@@ -22,43 +25,84 @@ struct StatusView: View {
             LinearGradient(gradient: Gradient(colors: [Color(hex: "5E5CE6"), Color(hex: "64D2FF")]), startPoint: .topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
             VStack {
                 
-                HStack {
-                    Spacer()
-                    Text("Status").font(.system(size: 30, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "fff"))
-                    Spacer()
-                }.padding(.top, 30)
+                VStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3)))
+                        VStack {
+                            Text("Download Speed").font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "fff"))
+                            Chart(data: viewModel.downloadArray)
+                                .chartStyle(
+                                    LineChartStyle(.quadCurve, lineColor: .white, lineWidth: 5)
+                                )
+                            Text(viewModel.downloadLabel).font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "fff"))
+                        }.padding()
+                    }.padding()
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3)))
+                        VStack {
+                            Text("Upload Speed").font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "fff"))
+                            Chart(data: viewModel.uploadArray)
+                                .chartStyle(
+                                    LineChartStyle(.quadCurve, lineColor: .white, lineWidth: 5)
+                                )
+                            Text(viewModel.uploadLabel).font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "fff"))
+                        }.padding()
+                    }.padding()
+                }.padding()
                 
-//                HStack {
-//                    List(identServers, id: \.id) { item in
-//                        ZStack {
-//                            RoundedRectangle(cornerRadius: 28)
-//                                .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-//                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
-//                            HStack {
-//                                ImageView(withURL: item.imageLink).padding()
-//                                Text(item.location).font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
-//                                Spacer()
-//                            }
-//                        }.onTapGesture {
-//                            viewModel.saveConfig(config: item)
-//                            self.presentationMode.wrappedValue.dismiss()
-//                        }
-//                    }
-//                }.padding()
+                HStack {
+                    Text(viewModel.timeLabel).font(.system(size: 30, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "fff"))
+                }
+                
+                //                HStack {
+                //                    List(identServers, id: \.id) { item in
+                //                        ZStack {
+                //                            RoundedRectangle(cornerRadius: 28)
+                //                                .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                //                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
+                //                            HStack {
+                //                                ImageView(withURL: item.imageLink).padding()
+                //                                Text(item.location).font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
+                //                                Spacer()
+                //                            }
+                //                        }.onTapGesture {
+                //                            viewModel.saveConfig(config: item)
+                //                            self.presentationMode.wrappedValue.dismiss()
+                //                        }
+                //                    }
+                //                }.padding()
                 HStack {
                     Spacer()
                     Button {
                         VPNLogic().disconnectVPN()
+                        viewModel.stopSpeedTest()
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 28)
                                 .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                                .frame(width: 98, height: 56)
-                            Image(systemName: "xmark.circle").resizable().frame(width: 30, height: 30, alignment: .center)
+                                .frame(width: 150, height: 60)
+                            Text("Disconnect").font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
                         }
                     }
+                    
                     Spacer()
-                }.padding(.bottom, 30).foregroundColor(.black)
+                    
+                    Button {
+                        self.presentingModal = true
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 28)
+                                .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                                .frame(width: 150, height: 60)
+                            Text("Browser").font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
+                        }
+                    }
+                    
+                    Spacer()
+                }.padding(.bottom, 30).foregroundColor(.black).sheet(isPresented: $presentingModal) { BrowserPage() }
             }.navigationBarTitle("").navigationBarHidden(true)
         }
     }
