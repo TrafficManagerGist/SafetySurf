@@ -52,16 +52,13 @@ class LoadingViewModel: ObservableObject {
     
     func getUsage(from ping: Double?) -> Int {
         guard let ping = ping else { return 0 }
-        if ping < 120 {
-            return 3
-        }
-        if ping > 120 && ping < 150{
-            return 2
-        }
-        if ping > 150 && ping < 200 {
+        if ping < 150 {
             return 1
+        } else if ping > 150 && ping < 200{
+            return 2
+        } else {
+            return 0
         }
-        return 0
     }
     
     func fetchRemoteConfig(){

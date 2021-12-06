@@ -12,7 +12,6 @@ import CoreLocation
 
 class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    var isFirstEnter = false
     @Published var isAnimating = false
     @Published var presentingStatus = false
     @Published var activatePrivacyScreen = false
@@ -22,22 +21,52 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var isOptimal = UserDefaults.standard.bool(forKey: "isAuto") {
         didSet {
             UserDefaults.standard.set(isOptimal, forKey: "isAuto")
-            if isOptimal {
-                gradColorOptimalFirst = "64D2FF"
-                gradColorOptimalSecond = "5E5CE6"
-            } else {
-                gradColorOptimalFirst = "7C858D"
-                gradColorOptimalSecond = "7C858D"
-            }
+            setOptimalColor()
+            selectAutoServer()
+            updateParams()
         }
     }
     
-    @Published var currentIP = UserDefaults.standard.string(forKey: "currentIP")
-    @Published var currentLocation = UserDefaults.standard.string(forKey: "currentLocation")
-    @Published var currentPing = UserDefaults.standard.string(forKey: "currentPing")
-    @Published var currentStrength = UserDefaults.standard.integer(forKey: "currentStrength")
+    @Published var currentIP = ""
+    @Published var currentLocation = ""
+    @Published var currentPing = ""
+    @Published var currentStrength = 0
     
-    @Published var firstStrength = { () -> String in
+    func updateParams() {
+        if isOptimal != UserDefaults.standard.bool(forKey: "isAuto") {
+            isOptimal = UserDefaults.standard.bool(forKey: "isAuto")
+        }
+        self.currentIP = getCurrentIP()
+        self.currentLocation = getCurrentLocation()
+        self.currentPing = getCurrentPing()
+        self.currentStrength = getCurrentStrength()
+    }
+    
+    private func getCurrentIP() -> String {
+        return UserDefaults.standard.string(forKey: "currentIP") ?? ""
+    }
+    
+    private func getCurrentLocation() -> String {
+        return UserDefaults.standard.string(forKey: "currentLocation") ?? ""
+    }
+    
+    private func getCurrentPing() -> String {
+        return UserDefaults.standard.string(forKey: "currentPing") ?? ""
+    }
+    
+    private func getCurrentStrength() -> Int {
+        firstStrength = getFirstStrength()
+        secondStrength = getSecondStrength()
+        thirdStrength = getThirdStrength()
+        return UserDefaults.standard.integer(forKey: "currentStrength")
+    }
+    
+    @Published var firstStrength = "FF375F"
+    @Published var secondStrength = "F5CFD9"
+    @Published var thirdStrength = "F5CFD9"
+    
+    private func getFirstStrength() -> String {
+        print("First \(UserDefaults.standard.integer(forKey: "currentStrength"))")
         switch UserDefaults.standard.integer(forKey: "currentStrength") {
         case 1:
             return "32D74B"
@@ -47,7 +76,9 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             return "FF375F"
         }
     }
-    @Published var secondStrength = { () -> String in
+    
+    private func getSecondStrength() -> String {
+        print("SECOND \(UserDefaults.standard.integer(forKey: "currentStrength"))")
         switch UserDefaults.standard.integer(forKey: "currentStrength") {
         case 1:
             return "32D74B"
@@ -57,7 +88,9 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             return "F5CFD9"
         }
     }
-    @Published var thirdStrength = { () -> String in
+    
+    private func getThirdStrength() -> String {
+        print("THIRD \(UserDefaults.standard.integer(forKey: "currentStrength"))")
         switch UserDefaults.standard.integer(forKey: "currentStrength") {
         case 1:
             return "32D74B"
@@ -70,10 +103,22 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     private var locationManager = CLLocationManager()
     
+    private func setOptimalColor() {
+        if isOptimal {
+            gradColorOptimalFirst = "64D2FF"
+            gradColorOptimalSecond = "5E5CE6"
+        } else {
+            gradColorOptimalFirst = "7C858D"
+            gradColorOptimalSecond = "7C858D"
+        }
+    }
+    
+    
     override init() {
         super.init()
         checkFirstEnter()
-        
+        setOptimalColor()
+        updateParams()
         if VPNLogic().vpnManager.connection.status == .connected {
             presentingStatus = true
         }
@@ -94,19 +139,11 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func checkVPNStatus(status:NEVPNStatus) {
         switch status {
-        case NEVPNStatus.invalid:
-            print("NEVPNConnection: Invalid")
-            self.status = "START"
-            isFirstEnter = true
         case NEVPNStatus.disconnected:
             print("NEVPNConnection: Disconnected")
             self.status = "START"
             presentingStatus = false
             self.isAnimating = false
-            if isFirstEnter {
-                VPNLogic().connectVPN()
-                isFirstEnter = false
-            }
         case NEVPNStatus.connecting:
             print("NEVPNConnection: Connecting")
             self.status = "STOP"
@@ -119,7 +156,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         case NEVPNStatus.reasserting:
             print("NEVPNConnection: Reasserting")
         case NEVPNStatus.disconnecting:
-            self.status = "DISCONNECTING"
+            self.status = "STOP"
             self.isAnimating = true
             print("NEVPNConnection: Disconnecting")
         @unknown default:
@@ -130,24 +167,21 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     private func checkFirstEnter() {
         if !UserDefaults.standard.bool(forKey: "notFirst") {
             selectAutoServer()
+            UserDefaults.standard.set(true, forKey: "isAuto")
             self.activatePrivacyScreen.toggle()
         }
     }
     
     func vpnButtonPressed() {
-        if UserDefaults.standard.string(forKey: "currentIP") != nil,
-           UserDefaults.standard.string(forKey: "currentID") != nil,
-           UserDefaults.standard.string(forKey: "currentUsername") != nil,
+        if UserDefaults.standard.string(forKey: "currentIP") != nil &&
+           UserDefaults.standard.string(forKey: "currentID") != nil &&
+           UserDefaults.standard.string(forKey: "currentUsername") != nil &&
            UserDefaults.standard.string(forKey: "currentPass") != nil {
-            if UserDefaults.standard.bool(forKey: "isAuto") {
-                selectAutoServer()
-            }
             vpnAction()
         } else {
             selectAutoServer()
             vpnAction()
         }
-        
     }
     
     private func vpnAction() {
@@ -169,6 +203,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                 optimalServer = server
             }
         }
+        print("SERVER LOC: \(optimalServer.location)")
         UserDefaults.standard.set(optimalServer.location, forKey: "currentLocation")
         UserDefaults.standard.set(optimalServer.serverID, forKey: "currentID")
         UserDefaults.standard.set(optimalServer.ip, forKey: "currentIP")

@@ -59,6 +59,7 @@ struct LocationView: View {
                         }.onTapGesture {
                             viewModel.saveConfig(config: item)
                             self.presentationMode.wrappedValue.dismiss()
+                            self.viewModel.mainVM?.updateParams()
                         }
                     }
                 }.padding()
@@ -66,6 +67,7 @@ struct LocationView: View {
                     Spacer()
                     Button {
                         self.presentationMode.wrappedValue.dismiss()
+                        self.viewModel.mainVM?.updateParams()
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 28)

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    
     @ObservedObject var viewModel: MainViewModel
     @State var presentingModal = false
     
@@ -54,24 +55,24 @@ struct MainView: View {
                             }
                             Spacer()
                             VStack {
-                                Text(viewModel.currentLocation ?? "").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
-                                Text(viewModel.currentIP ?? "").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
+                                Text(viewModel.currentLocation ).font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
+                                Text(viewModel.currentIP ).font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
                             }
                             Spacer()
                             VStack {
                                 HStack {
-                                    Circle().fill().foregroundColor(Color(hex: viewModel.firstStrength())).frame(width: 10, height: 10, alignment: .center)
-                                    Circle().fill().foregroundColor(Color(hex: viewModel.secondStrength())).frame(width: 10, height: 10, alignment: .center)
-                                    Circle().fill().foregroundColor(Color(hex: viewModel.thirdStrength())).frame(width: 10, height: 10, alignment: .center)
+                                    Circle().fill().foregroundColor(Color(hex: viewModel.firstStrength)).frame(width: 10, height: 10, alignment: .center)
+                                    Circle().fill().foregroundColor(Color(hex: viewModel.secondStrength)).frame(width: 10, height: 10, alignment: .center)
+                                    Circle().fill().foregroundColor(Color(hex: viewModel.thirdStrength)).frame(width: 10, height: 10, alignment: .center)
                                 }
-                                Text("\(viewModel.currentPing ?? "") ms").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
+                                Text("\(viewModel.currentPing ) ms").font(.custom("Antonio Light", size: 15)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "7C858D"))
                             }
                             Spacer()
                         }.padding(20)
                         HStack {
                             Spacer()
                             
-                            NavigationLink(destination: LocationView(viewModel: LocationViewModel())) {
+                            NavigationLink(destination: LocationView(viewModel: LocationViewModel(servers: nil, mainVM: self.viewModel))) {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 28)
                                         .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
@@ -94,7 +95,7 @@ struct MainView: View {
                         }.padding(.bottom, 50)
                     }
                 }.present($viewModel.activatePrivacyScreen, view: PrivacyView(isPrivacyPresented: $viewModel.activatePrivacyScreen))
-                    .present($viewModel.presentingStatus, view: StatusView(viewModel: StatusViewModel()))
+                .present($viewModel.presentingStatus, view: StatusView(viewModel: StatusViewModel()))
             }.edgesIgnoringSafeArea(.all)
         }
     }

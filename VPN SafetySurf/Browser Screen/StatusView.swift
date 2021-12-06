@@ -56,24 +56,6 @@ struct StatusView: View {
                 HStack {
                     Text(viewModel.timeLabel).font(.system(size: 30, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "fff"))
                 }
-                
-                //                HStack {
-                //                    List(identServers, id: \.id) { item in
-                //                        ZStack {
-                //                            RoundedRectangle(cornerRadius: 28)
-                //                                .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                //                                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.07999999821186066)), radius:24, x:0, y:16)
-                //                            HStack {
-                //                                ImageView(withURL: item.imageLink).padding()
-                //                                Text(item.location).font(.system(size: 20, weight: .semibold)).tracking(1).multilineTextAlignment(.center).foregroundColor(Color(hex: "000"))
-                //                                Spacer()
-                //                            }
-                //                        }.onTapGesture {
-                //                            viewModel.saveConfig(config: item)
-                //                            self.presentationMode.wrappedValue.dismiss()
-                //                        }
-                //                    }
-                //                }.padding()
                 HStack {
                     Spacer()
                     Button {

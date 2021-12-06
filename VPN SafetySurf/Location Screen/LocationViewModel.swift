@@ -8,9 +8,11 @@ import SwiftUI
 import Combine
 
 class LocationViewModel: ObservableObject {
+    @Published var mainVM: MainViewModel?
     @Published var servers: [ServerIdentifiable]?
     
-    init(servers: [ServerIdentifiable]? = nil) {
+    init(servers: [ServerIdentifiable]? = nil, mainVM: MainViewModel? = nil) {
+        self.mainVM = mainVM
         if servers != nil {
             self.servers = servers
         }
@@ -26,6 +28,7 @@ class LocationViewModel: ObservableObject {
             UserDefaults.standard.set(config.pass, forKey: "currentPass")
             UserDefaults.standard.set(config.strength, forKey: "currentStrength")
             UserDefaults.standard.set(config.ping, forKey: "currentPing")
+            UserDefaults.standard.set(false, forKey: "isAuto")
         } else {
             guard let servers = servers else { return }
             guard let first = servers.first else { return }
