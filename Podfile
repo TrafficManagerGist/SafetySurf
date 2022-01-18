@@ -9,7 +9,6 @@ target 'VPN SafetySurf' do
   pod 'PlainPing'
   pod 'AppsFlyerFramework'
   pod 'OneSignal'
-  pod 'ApphudSDK'
   pod 'Amplitude'
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'

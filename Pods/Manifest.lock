@@ -1,6 +1,5 @@
 PODS:
   - Amplitude (8.5.0)
-  - ApphudSDK (2.4.4)
   - AppsFlyerFramework (6.4.2):
     - AppsFlyerFramework/Main (= 6.4.2)
   - AppsFlyerFramework/Main (6.4.2)
@@ -106,7 +105,6 @@ PODS:
 
 DEPENDENCIES:
   - Amplitude
-  - ApphudSDK
   - AppsFlyerFramework
   - Firebase/Core
   - Firebase/RemoteConfig
@@ -116,7 +114,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Amplitude
-    - ApphudSDK
     - AppsFlyerFramework
     - Firebase
     - FirebaseABTesting
@@ -135,7 +132,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Amplitude: ef9ed339ddd33c9183edf63fa4bbaa86cf873321
-  ApphudSDK: 6633d84ca17c0a61d00f9ac7c280179ac258cd8f
   AppsFlyerFramework: 2303994c0bda3afa48eba93680ab5fe48f46cd94
   Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
   FirebaseABTesting: 9de50b34bf9eb4a07d4edb7af82c14152fd905aa
@@ -152,6 +148,6 @@ SPEC CHECKSUMS:
   PlainPing: 41fb93099deb2f5ddbc534a934eb3bf07522d437
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 2958203bb5bcbe1638415b88430d45d8a5f8b023
+PODFILE CHECKSUM: 0596d98d39fa7ea6d27041c02fb39876b4d71464
 
 COCOAPODS: 1.11.2
